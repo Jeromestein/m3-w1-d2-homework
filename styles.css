@@ -1,0 +1,280 @@
+/* Custom fonts */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom header with decorative font */
+header span {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.75rem;
+    color: rgb(216, 150, 7);
+}
+
+/* Layout colors and backgrounds */
+#leftside {
+    background-color: rgb(77, 192, 154);
+    min-height: 200vh;
+    position: relative;
+    width: 20%;
+}
+
+#rightside {
+    background-color: rgb(238, 226, 192);
+    height: 200vh;
+    position: relative;
+    width: 80%;
+}
+
+.content-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 0.7rem;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    max-width: 1200px;
+    z-index: 10;
+}
+
+/* Header styling */
+header {
+    padding: 1rem;
+    background-color: rgba(231, 229, 229, 0.5);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Comment section title */
+main h2 {
+    color: rgb(60, 190, 160);
+    text-transform: uppercase;
+}
+
+/* Photo styling */
+#photos img {
+    border: 0.5rem solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Profile image styling */
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 0.85rem;
+}
+
+/* Custom modal backdrop - used with Bootstrap modal */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1040;
+}
+
+/* Profile styles */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.author-info {
+    color: #666;
+}
+.reply {
+    margin-left: 10px;
+    color: #4DC09A;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Modal styles */
+.author-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.modal-content {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 80%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+.modal-header {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.modal-header h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.modal-body p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+.foodie-level {
+    font-weight: bold;
+    font-size: 14px;
+}
+.modal-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+.close-button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Food image styles */
+.food-image-container {
+    margin-bottom: 1rem;
+}
+
+.food-image {
+    border: 0.5rem solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.food-image:hover {
+    transform: scale(1.03);
+}
+
+/* Modal wrapper */
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
+}
+
+/* Ensure modal content appears above backdrop */
+.modal-dialog {
+    z-index: 1050;
+    position: relative;
+}
+
+/* Navigation styles */
+.navbar-nav .nav-item {
+    margin-left: 0.5rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ff0000 !important; 
+    font-weight: bold !important;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #d40000 !important;
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navbar {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    
+    .content-container {
+        top: 2%;
+        left: 5%;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        padding: 1rem;
+        margin: 1rem auto;
+        width: 95%;
+    }
+    
+    main .row {
+        flex-direction: column;
+    }
+    
+    #photos {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .food-image {
+        max-width: 90%;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    
+    .navbar {
+        margin-top: 0.5rem;
+    }
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+    .content-container {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        width: 85%;
+    }
+} 
